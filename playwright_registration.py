@@ -18,7 +18,7 @@ with sync_playwright() as playwright:
     username_input.fill("username")
 
     # Находим поле "Password" и заполняем его
-    password_input = page.locator('//div[@data-testid="registration-form-password-input"]//div//input')
+    password_input = page.locator('//div[@data-testid="registration-form-password-input"]//div//input') #locator оставлен специально
     password_input.fill("password")
 
     # Находим кнопку "Registration" и кликаем на нее
