@@ -39,7 +39,7 @@ with sync_playwright() as playwright:
     username_input.fill("username")
 
     # Находим поле "Password" и заполняем его
-    password_input = page.locator('//div[@data-testid="registration-form-password-input"]//div//input')  # locator оставлен специально
+    password_input = page.get_by_test_id('registration-form-password-input').locator('input')
     password_input.fill("password")
 
     # Проверяем, кнопка "Registration" перешла в состояние enabled
